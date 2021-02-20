@@ -104,3 +104,12 @@ Reading of ATtiny85, no2, with Tetris
     F0: 0x1E 0x00 0x78 0x30 0x30 0x30 0x33 0x33 0x1E 0x00 0x67 0x66 0x36 0x1E 0x36 0x66 
 
     Programming mode off.
+
+## ATtinyArcade
+
+[webbgoggles, AttinyArcade](https://github.com/webboggles/AttinyArcade)
+
+## More games
+
+[andyhighnumber, Attiny-Arduino-Games](https://github.com/andyhighnumber/Attiny-Arduino-Games)  
+>>>>>>> 1e57dbd8131bc683bb3b376d9e93d66b33e94c2e

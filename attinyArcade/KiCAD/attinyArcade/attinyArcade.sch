@@ -1,0 +1,213 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20PU U1
+U 1 1 60300F7E
+P 3250 3300
+F 0 "U1" H 2721 3346 50  0000 R CNN
+F 1 "ATtiny85-20PU" H 2721 3255 50  0000 R CNN
+F 2 "My_Misc:DIP-8_W7.62mm_large" H 3250 3300 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 3250 3300 50  0001 C CNN
+	1    3250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 60301909
+P 1750 3400
+F 0 "BT1" H 1868 3496 50  0000 L CNN
+F 1 "3V" H 1868 3405 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_103_1x20mm" V 1750 3460 50  0001 C CNN
+F 3 "~" V 1750 3460 50  0001 C CNN
+	1    1750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker LS1
+U 1 1 60302339
+P 6100 3900
+F 0 "LS1" H 6270 3896 50  0000 L CNN
+F 1 "Speaker" H 6270 3805 50  0000 L CNN
+F 2 "My_Misc:Buzzer_TDK_PS1240P02BT_D12.2mm_H6.5mm_large" H 6100 3700 50  0001 C CNN
+F 3 "~" H 6090 3850 50  0001 C CNN
+	1    6100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 60302E7B
+P 4450 2900
+F 0 "SW1" V 4404 3048 50  0000 L CNN
+F 1 "SW_Push" V 4495 3048 50  0000 L CNN
+F 2 "My_Misc:SW_PUSH_6mm_large" H 4450 3100 50  0001 C CNN
+F 3 "~" H 4450 3100 50  0001 C CNN
+	1    4450 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 6030322F
+P 5050 2950
+F 0 "SW2" V 5004 3098 50  0000 L CNN
+F 1 "SW_Push" V 5095 3098 50  0000 L CNN
+F 2 "My_Misc:SW_PUSH_6mm_large" H 5050 3150 50  0001 C CNN
+F 3 "~" H 5050 3150 50  0001 C CNN
+	1    5050 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60303915
+P 4450 3450
+F 0 "R1" H 4520 3496 50  0000 L CNN
+F 1 "10k" H 4520 3405 50  0000 L CNN
+F 2 "My_Misc:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_large" V 4380 3450 50  0001 C CNN
+F 3 "~" H 4450 3450 50  0001 C CNN
+	1    4450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60303C6B
+P 5050 3500
+F 0 "R2" H 5120 3546 50  0000 L CNN
+F 1 "10k" H 5120 3455 50  0000 L CNN
+F 2 "My_Misc:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical_large" V 4980 3500 50  0001 C CNN
+F 3 "~" H 5050 3500 50  0001 C CNN
+	1    5050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L My_Parts:SSD1306_I2C_display U2
+U 1 1 60304108
+P 5850 4500
+F 0 "U2" H 6728 4401 50  0000 L CNN
+F 1 "SSD1306_I2C_display" H 6728 4310 50  0000 L CNN
+F 2 "My_Parts:SSD1306_I2C_0.96_OLED_display_large" H 6075 4600 50  0001 C CNN
+F 3 "" H 6075 4600 50  0001 C CNN
+	1    5850 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2700 3250 2500
+Wire Wire Line
+	3250 2500 1750 2500
+Wire Wire Line
+	1750 2500 1750 3200
+Wire Wire Line
+	3250 3900 3250 4100
+Wire Wire Line
+	3250 4100 1750 4100
+Wire Wire Line
+	1750 4100 1750 3500
+$Comp
+L power:GND #PWR01
+U 1 1 60308232
+P 3250 4300
+F 0 "#PWR01" H 3250 4050 50  0001 C CNN
+F 1 "GND" H 3255 4127 50  0000 C CNN
+F 2 "" H 3250 4300 50  0001 C CNN
+F 3 "" H 3250 4300 50  0001 C CNN
+	1    3250 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4300 3250 4100
+Connection ~ 3250 4100
+Wire Wire Line
+	4450 3600 4450 3800
+Wire Wire Line
+	4450 3800 5050 3800
+Wire Wire Line
+	5050 3800 5050 3650
+Wire Wire Line
+	5400 4000 5900 4000
+Wire Wire Line
+	5850 4500 5400 4500
+Wire Wire Line
+	4450 3300 4450 3100
+Wire Wire Line
+	5050 3350 5050 3200
+$Comp
+L power:GND #PWR02
+U 1 1 6031A48C
+P 5400 5050
+F 0 "#PWR02" H 5400 4800 50  0001 C CNN
+F 1 "GND" H 5405 4877 50  0000 C CNN
+F 2 "" H 5400 5050 50  0001 C CNN
+F 3 "" H 5400 5050 50  0001 C CNN
+	1    5400 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5050 5400 4500
+Connection ~ 5400 4500
+Wire Wire Line
+	3250 2500 4450 2500
+Wire Wire Line
+	4450 2500 4450 2700
+Connection ~ 3250 2500
+Wire Wire Line
+	4450 2500 5050 2500
+Wire Wire Line
+	5050 2500 5050 2750
+Connection ~ 4450 2500
+Wire Wire Line
+	5400 4000 5400 4500
+Wire Wire Line
+	5050 3800 5400 3800
+Wire Wire Line
+	5400 3800 5400 4000
+Connection ~ 5050 3800
+Connection ~ 5400 4000
+Wire Wire Line
+	3850 3000 4250 3000
+Wire Wire Line
+	4250 3000 4250 3100
+Wire Wire Line
+	4250 3100 4450 3100
+Connection ~ 4450 3100
+Wire Wire Line
+	3850 3100 4150 3100
+Wire Wire Line
+	4150 3100 4150 3900
+Wire Wire Line
+	4150 3900 5900 3900
+Wire Wire Line
+	3850 3200 5050 3200
+Connection ~ 5050 3200
+Wire Wire Line
+	5050 3200 5050 3150
+Wire Wire Line
+	3850 3300 4050 3300
+Wire Wire Line
+	4050 3300 4050 4800
+Wire Wire Line
+	4050 4800 5850 4800
+Wire Wire Line
+	3850 3400 3950 3400
+Wire Wire Line
+	3950 3400 3950 4700
+Wire Wire Line
+	3950 4700 5850 4700
+Wire Wire Line
+	5050 2500 5650 2500
+Wire Wire Line
+	5650 2500 5650 4600
+Wire Wire Line
+	5650 4600 5850 4600
+Connection ~ 5050 2500
+$EndSCHEMATC
